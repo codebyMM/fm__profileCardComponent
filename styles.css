@@ -1,0 +1,155 @@
+/*================================ GOOGLE FONTS ================================*/
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+/*================================ CSS VARIABLES ================================*/
+:root {
+    /* Font */
+    --kumbh: "Kumbh Sans", sans-serif;
+    /* Color */
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+    /* Font Weight */
+    --fw-400: 400;
+    --fw-700: 700;
+}
+/*================================ UTILITIES ================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.attribution { 
+    font-size: 11px;
+    text-align: center; 
+}
+h1, h2 {
+    font-size: 1.125em;
+}
+.background-items img {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    z-index: -999;
+}
+.top  {
+    top: -30%;
+    left: -30px;
+}
+.bottom {
+    bottom: -45%;
+    right: 0;
+}
+/*================================ BODY ================================*/
+body {
+    font-family: var(--kumbh);
+    background: var(--dark-cyan);
+    position: relative;
+    max-height: 100vh;
+    overflow: hidden;
+}
+/*================================ MAIN ================================*/
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+/* Card */
+.card-container {
+    width: 100%;
+    max-width: 385px;
+    background: #fff;
+    border-radius: 20px;
+    position: relative;
+}
+.card-header {
+    text-align: center;
+}
+.img-header{
+    border-radius: 20px 20px 0 0;
+    background-image: url(images/bg-pattern-card.svg);
+    height: 150px;
+}
+.profile-picture-container {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    padding: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -32%);
+    height: 100px;
+    width: 100px;
+}
+.profile-picture {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.header-content {
+    padding-top: 5rem;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid #d1cfcf;
+    height: 170px;
+}
+.header-content h1 {
+    font-weight: var(--fw-700);
+    margin-bottom: .5rem;
+}
+.header-content h1 span {
+    margin-left: .3rem;
+}
+.header-content h1 span,
+.header-content p {
+    color: var(--dark-gray);
+    font-weight: var(--fw-400);
+}
+.card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.5rem 0;
+}
+.stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--very-dark-desaturated-blue);
+    gap: .4rem;
+}
+.stats p {
+    font-size: .6rem;
+    color: var(--dark-grayish-blue);
+    font-weight: var(--fw-700);
+    letter-spacing: 1px;
+}
+
+@media (max-width: 400px) {
+    .card-container {
+        max-width: 320px;
+    }
+    .background-items img {
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+    }
+    .top  {
+        top: -10%;
+        left: -50%;
+    }
+    .bottom {
+        bottom: 2%;
+        right: -50%;
+    }
+}
